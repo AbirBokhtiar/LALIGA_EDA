@@ -1,33 +1,35 @@
 Demo Link - https://drive.google.com/file/d/19YPZ1tPGD2krjiax8eYhy8l_Pq3yNGxc/view?usp=sharing
 
-Generated markdown
 # La Liga Match Analysis: 2019-2025
 
 ## Overview
 
 This repository contains Python code for analyzing La Liga match data from the 2019 to 2025 seasons. The analysis focuses on team performance metrics, patterns, and visualizations, providing insights into team strengths, weaknesses, and areas for potential improvement.  The code leverages libraries such as Pandas, Matplotlib, and Seaborn for data manipulation, statistical calculations, and visualization.
 
-## Project Structure
+<h2>📁 Project Structure</h2>
+
+<pre style="background-color:#f9fafb; padding:1em; border-radius:0.5em; font-family:monospace; font-size:14px; overflow-x:auto;">
+├── README.md                         # Project overview and instructions
+├── requirements.txt                  # Python dependencies
+
+├── data/                             # Data storage
+│   ├── matches_full.csv              # Raw La Liga match data
+│   ├── cleaned_la_liga_matches.csv   # Cleaned and preprocessed data
+│   ├── la_liga_team_summary.csv      # Summary of team performance
+│   └── laliga_analysis_report.html   # HTML report with analysis results
+
+├── notebooks/                        # Exploratory data analysis
+│   └── eda.ipynb                     # EDA pipeline in Jupyter Notebook
+
+├── images/                           # Visualizations
+│   └── [Example chart images]        # Examples: bar_chart.png, scatter_plot.png
+
+├── scripts/                          # Utility scripts
+│   ├── report.py                     # Generates HTML report
+│   └── visuals.py                    # Creates visualizations
+</pre>
 
 
-├── README.md # This documentation file
-├── analysis.ipynb # Jupyter Notebook with the full analysis (alternative)
-├── la_liga_analysis.py # Main Python script containing the functions
-├── data/ # Directory for storing the data
-│ └── matches_full.csv # Sample La Liga match data (CSV format)
-| └── cleaned_la_liga_matches.csv # Cleaned La Liga match data (CSV format)
-| └── la_liga_team_summary.csv # Summary of Laliga Teams Performance (CSV format)
-| └── laliga_analysis_report.html # La Liga match data Analysis (HTML Report)
-├── eda/ # Directory for exploratory data analysis notebook
-│ └── eda.ipynb # Exploratory Data Analysis pipeline
-├── images/ # Directory for saving c
-│ └── (example images of charts generated)
-├── scripts/ # Directory for python scripts
-│ └── report.py # Html report generation
-│ └── visuals.py # generating visualizations
-└── requirements.txt # List of Python dependencies
-
-Generated code
 ## Data Source
 
 The analysis utilizes La Liga match data uploaded on Kaggle, typically scraped from websites like FBref or other sports data providers. The dataset (`matches_full.csv`) is included in the `data/` directory for demonstration purposes.  You may need to adjust the data loading path in the code to reflect your actual data location.
@@ -83,20 +85,25 @@ numpy==1.24.3
 
     ```bash
     git clone <repository_url>
-    cd la-liga-analysis
+    cd LALIGA_EDA
     ```
 
 2.  **Place your La Liga match data CSV file in the `data/` directory (or update the file path in the script).**
 
-3.  **Run the analysis script:**
+3.  **Run the scripts:**
 
     ```bash
-    python la_liga_analysis.py
+    python visuals.py
+    ```
+    ```bash
+    python report.py
     ```
 
-    Alternatively, you can open and run the `analysis.ipynb` Jupyter Notebook.
+    Or
 
-4.  **The script will:**
+    **Run the cells of the eda.ipynb notebook**
+
+5.  **The notebook will:**
 
     *   Load and clean the data.
     *   Calculate team performance metrics.
